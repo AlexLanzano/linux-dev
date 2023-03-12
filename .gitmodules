@@ -1,0 +1,9 @@
+[submodule "compiler"]
+	path = compiler
+	url = git@github.com:AlexLanzano/compiler.git
+[submodule "linux"]
+	path = linux
+	url = git@github.com:AlexLanzano/linux.git
+[submodule "u-boot"]
+	path = u-boot
+	url = git@github.com:AlexLanzano/u-boot.git
