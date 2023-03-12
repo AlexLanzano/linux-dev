@@ -1,5 +1,5 @@
 BOARD_COMPILER = aarch64-linux-gnu
-COMPILER := $(PWD)/compiler/$(BOARD_COMPILER)/bin/$(BOARD_COMPILER)-
+COMPILER = $(PWD)/compiler/$(BOARD_COMPILER)/bin/$(BOARD_COMPILER)-
 BOARD_UBOOT_DEFCONFIG = rk3568_defconfig
 BOARD_UBOOT_BUILD_FLAGS = CHIP="rk3568" \
                           ARCH=arm \
@@ -9,7 +9,14 @@ BOARD_UBOOT_BUILD_FLAGS = CHIP="rk3568" \
 
 BOARD_LINUX_BUILD_FLAGS = ARCH=arm64 CROSS_COMPILE=$(COMPILER)
 
-$(shell mkdir -p images/rock-3a)
+include $(root-dir)/Makefile.common
+
+
+.PHONY: all
+all: $(clean-target) build-compiler build-u-boot build-linux build-image
+
+.PHONY: clean
+clean: clean-u-boot clean-linux clean-image
 
 build-image: images/rock-3a/boot.img images/rock-3a/linux.img
 

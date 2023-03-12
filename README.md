@@ -22,6 +22,13 @@ Generated after the build:
 
 ``
 ## How to Build
+
+Build image:
 ```
-make board=<board name>
+make <board>
+```
+
+Build specific target:
+```
+make <board> target=<target>
 ```
