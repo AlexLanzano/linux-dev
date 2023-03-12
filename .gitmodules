@@ -7,3 +7,6 @@
 [submodule "u-boot"]
 	path = u-boot
 	url = git@github.com:AlexLanzano/u-boot.git
+[submodule "arm-trusted-firmware"]
+	path = arm-trusted-firmware
+	url = git@github.com:AlexLanzano/arm-trusted-firmware.git

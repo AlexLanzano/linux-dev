@@ -11,6 +11,7 @@ BOARD_LINUX_BUILD_FLAGS = ARCH=arm64 CROSS_COMPILE=$(COMPILER)
 
 $(shell mkdir -p images/rock-5b)
 
+.PHONY: build-image
 build-image: images/rock-5b/boot.img images/rock-5b/linux.img
 
 images/rock-5b/boot.img: images/rock-5b/loader1.img u-boot/u-boot.itb
